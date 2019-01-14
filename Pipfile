@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+djangorestframework = "*"
+Django = "*"
+django-rest-swagger = "*"
+channels = "*"
+channels_redis = "*"
+twisted = "*"
+"pywin32" = "*"
+psycopg2-binary = "*"
+python-decouple = "*"
+whitenoise = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.6"

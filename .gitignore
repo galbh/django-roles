@@ -1,0 +1,12 @@
+node_modules/
+venv/
+dist/
+staticfiles/
+__pycache__/
+npm-debug.log
+db.sqlite3
+.idea
+.vscode
+.pyc
+Pipfile.lock
+.env
