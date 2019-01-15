@@ -56,7 +56,7 @@ class HomePage extends Component {
     return (
       <div className={styles.homePage}>
         {
-          userTypes && users.length && loggedInUser &&
+          userTypes && users.length > 0 && loggedInUser &&
           <div>
             <div>Users list</div>
             <UsersListComponent
