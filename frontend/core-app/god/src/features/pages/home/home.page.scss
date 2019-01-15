@@ -1,14 +1,3 @@
 .homePage{
-    display: flex;
-    .selectUtilityContainer{
-        width: 50%;
-        margin: auto;
-        height: 200px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        > div {
-            width: 60%;
-        }
-    }
+    width: 100%;
 }

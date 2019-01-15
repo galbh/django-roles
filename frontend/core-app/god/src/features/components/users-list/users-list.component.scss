@@ -1,0 +1,11 @@
+.container{
+
+  .listItem{
+    display: flex;
+    justify-content: space-between;
+
+    > div{
+      width: 33%;
+    }
+  }
+}

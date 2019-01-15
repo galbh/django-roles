@@ -41,7 +41,8 @@
     "redux-thunk": "2.2.0",
     "rimraf": "2.6.2",
     "webpack": "3.8.1",
-    "whatwg-fetch": "2.0.4"
+    "whatwg-fetch": "2.0.4",
+    "@bit/gal.roles.components.dialog": "file:./components/components/dialog"
   },
   "devDependencies": {
     "autoprefixer-loader": "3.2.0",

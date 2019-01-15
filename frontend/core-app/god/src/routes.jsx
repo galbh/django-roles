@@ -6,8 +6,8 @@ import App from './features/pages/app/app.page.jsx';
 import DefaultLayout from './features/pages/default-layout/default-layout.page.jsx';
 import i18n from '../config/i18n';
 import HomePage from './features/pages/home/home.page.jsx';
-import AboutPage from './features/pages/about/about.page.jsx';
 import { ROUTES } from './common/constants';
+import RegistrationPage from './features/pages/registration/registration.page.jsx';
 
 const Root = ({ store }) => ({
   render () {
@@ -18,7 +18,7 @@ const Root = ({ store }) => ({
             <App>
               <Switch>
                 <DefaultLayout path={ROUTES.home} component={HomePage} />
-                <DefaultLayout path={ROUTES.about} component={AboutPage} />
+                <DefaultLayout path={ROUTES.registration} component={RegistrationPage} />
               </Switch>
             </App>
           </Router>

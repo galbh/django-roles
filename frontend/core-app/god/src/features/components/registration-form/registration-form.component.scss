@@ -1,0 +1,27 @@
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .card{
+    width: 50%;
+    padding: 20px;
+
+    .formControl{
+      width: 100%;
+
+      section{
+        display: flex;
+        margin: -10px;
+
+        > div{
+          margin: 20px;
+          width: 100%;
+          position: relative;
+        }
+      }
+      
+    }
+  }
+
+}

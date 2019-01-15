@@ -1,5 +1,7 @@
 const authState = {
-  loggedInUser: null
+  loggedInUser: null,
+  userTypes: null,
+  users: []
 };
 
 export default authState;

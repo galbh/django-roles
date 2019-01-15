@@ -85,8 +85,8 @@ def save_user(request, created_user, password, user_type):
     profile.save()
 
     # Authenticate user
-    user = authenticate(username=created_user.email, password=password)
-    auth_login(request, user)
+    # user = authenticate(username=created_user.email, password=password)
+    # auth_login(request, user)
 
 
 def create_user_profile(instance, created, **kwargs):
@@ -272,7 +272,10 @@ class GetAllUsers(generics.RetrieveAPIView):
     permission_classes = (IsGodOrAdminUser, )
 
     def get(self, request, *args, **kwargs):
-        return Response(UserProfileSerializer(UserProfile.objects.all(), many=True).data, status=HTTP_200_OK)
+        return Response(
+            UserProfileSerializer(UserProfile.objects.all().order_by('-id'), many=True).data,
+            status=HTTP_200_OK
+        )
 
 
 class DeleteUser(generics.DestroyAPIView):

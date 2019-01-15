@@ -1,0 +1,16 @@
+.container{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  margin: 20px;
+  
+  button{
+    width: 50%;
+    margin: -20px
+  }
+
+  > div{
+    width: calc(50% - 10px);
+    background: inherit!important;
+  }
+}

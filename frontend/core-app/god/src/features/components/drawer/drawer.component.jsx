@@ -30,14 +30,15 @@ const DrawerComponent = ({
       />
 
       <DrawerLink
-        to={ROUTES.about}
+        to={ROUTES.registration}
         iconSrc={ImgSrc}
-        label={t('ABOUT_PAGE')}
+        label={t('REGISTRATION_PAGE')}
         closeDrawer={closeDrawer}
       />
 
       {/* Logout */}
       <MenuItem onClick={onLogout} className={styles.link}>
+        <i className='material-icons'>exit_to_app</i>
         {t('LOGOUT')}
       </MenuItem>
 

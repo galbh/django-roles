@@ -1,1 +1,8 @@
 @import '../../../../assets/scss/variables.scss';
+
+:global{
+  label{
+    text-transform: capitalize;
+    font-size: 12px!important;
+  }
+}
