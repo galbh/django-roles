@@ -22,6 +22,8 @@ run_chrome = 'start chrome "http://localhost:8000"'
 create_super_user = "echo from backend.accounts.models import UserProfile; " \
                     "from backend.accounts.models import User; " \
                     "created_user = User.objects.create_superuser('admin', 'admin@mail.com', '1234'); " \
+                    "created_user.user_type = User.GOD_USER_ID;" \
+                    "created_user.save();" \
                     "UserProfile.objects.create(user=created_user, full_name=created_user.username) " \
                     "| pipenv run python manage.py shell"
 
