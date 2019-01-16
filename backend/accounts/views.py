@@ -54,6 +54,7 @@ class Registration(generics.CreateAPIView):
         password = data.get('password')
         email = data.get('email')
         user_type = data.get('user_type')
+        username = data.get('username')
 
         if email and password:
 
@@ -63,7 +64,8 @@ class Registration(generics.CreateAPIView):
             if User.objects.filter(email=email).first():
                 return Response(Constants.ERROR_USER_EXISTS, status=HTTP_400_BAD_REQUEST)
 
-            created_user, created = User.objects.get_or_create(username=email, email=email)
+            default_username = username or email
+            created_user, created = User.objects.get_or_create(username=default_username, email=email)
 
             if created:
                 save_user(request, created_user, password, user_type)
