@@ -12,14 +12,14 @@ class RegistrationFormComponent extends Component {
       full_name: '',
       phone_number: '',
       username: '',
-      userType: "3"
+      user_type: "3"
     }
   }
 
   render() {
 
     const { userTypes, onSubmit } = this.props;
-    const { userType } = this.state;
+    const { user_type } = this.state;
 
     return (
       <div className={styles.container}>        
@@ -69,8 +69,8 @@ class RegistrationFormComponent extends Component {
                     <InputLabel>User types</InputLabel>
                     <Select
                       fullWidth
-                      value={userType}
-                      onChange={(e) => this.setState({ userType: e.target.value })}
+                      value={user_type}
+                      onChange={(e) => this.setState({ user_type: e.target.value })}
                     >
                       {
                         Object.keys(userTypes).map(key => {
